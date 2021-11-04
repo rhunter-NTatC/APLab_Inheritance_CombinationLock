@@ -113,6 +113,8 @@ class CombinationLock_Tests {
 	@DisplayName("Test #3: setCombination")
 	void test3() {
 		
+		outputStream = "";
+		
 		CombinationLock c1 = new CombinationLock("hello");
 		
 		int testNum = 1;
