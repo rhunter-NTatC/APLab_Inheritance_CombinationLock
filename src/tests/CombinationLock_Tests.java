@@ -149,12 +149,12 @@ class CombinationLock_Tests {
 			
 			if (testNum == 1) {
 				System.out.println("Test #3: \n"
-						 + "   getCombination() did not tell the user to Unlock First\n"
+						 + "   setCombination() did not tell the user to Unlock First\n"
 				         + "   \n\n\n\n");
 			}
 			else if (testNum == 2) {
 				System.out.println("Test #3: \n"
-						 + "   getCombination() password was not changed correctly\n"
+						 + "   setCombination() password was not changed correctly\n"
 				         + "   \n\n\n\n");
 				
 			}
@@ -181,7 +181,8 @@ class CombinationLock_Tests {
 			outputStream = "";
 			c1.close();
 			c1.getCombination();
-			Assertions.assertTrue(outputStream.contains("Unlock First"));
+			Assertions.assertTrue(outputStream.contains("Unlock First") 
+							   || c1.getCombination().contains("Unlock First"));
 			
 			resetPrintStream();
 			overridePrintStatements();
